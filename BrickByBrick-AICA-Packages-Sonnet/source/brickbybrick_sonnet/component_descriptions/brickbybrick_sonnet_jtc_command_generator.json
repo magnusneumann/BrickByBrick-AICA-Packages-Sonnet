@@ -1,8 +1,11 @@
-{
-  "name": "jtc_command_generator",
-  "display_name": "JTC Command Generator",
-  "description": "Berechnet die benötigte Zeit für eine Pose und sendet einen einmaligen JTC-String-Befehl.",
-  "component_type": "lifecycle_component",
+ {
+  "name": "JTC Command Generator",
+  "description": {
+    "brief": "Erzeugt einen Service Command für den JTC",
+    "details": "Vergleicht istPose und ZielPose, errechnet eine Zeit nach parametrisierter Geschwindigkeit und formuliert einen Befehl. Parallel muss durch einen Aicablock Signal to TF die ZielPose in den TF Tree geschrieben werden."
+  },
+  "registration": "brickbybrick_sonnet::JtcCommandGenerator",
+  "inherits": "modulo_components::LifecycleComponent",
   "inputs": [
     {
       "name": "ist_pose",
